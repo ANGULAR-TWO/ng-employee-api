@@ -1,29 +1,29 @@
 <h1>Add Employee Form</h1>
 <button class="btn btn-primary" [routerLink]="['employees']">View Employee List</button>
-<form action="">
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit(employeeForm.value)">
     <div class="form-group">
         <label for="firstName">First Name</label>
-        <input id="firstName" type="text" class="form-control">
+        <input id="firstName" type="text" class="form-control" formControlName="firstName">
     </div>
     <div class="form-group">
         <label for="lastName">Last Name</label>
-        <input id="lastName" type="text" class="form-control">
+        <input id="lastName" type="text" class="form-control" formControlName="lastName">
     </div>
 
     <div class="form-group">
         <label for="dateOfBirth">Date Of Birth</label>
-        <input id="dateOfBirth" type="text" class="form-control">
+        <input id="dateOfBirth" type="text" class="form-control" formControlName="dateOfBirth">
     </div>
 
     <div class="form-group">
         <label for="gender">Gender</label>
-        <select class="form-control" id="gender">
+        <select class="form-control" id="gender" formControlName="gender">
             <option *ngFor="let gender of genders" value="{{gender}}">{{gender}}</option>
         </select>
     </div>
     <div class="form-group">
-        <label for="gender">Department</label>
-        <select class="form-control" id="departmet">
+        <label for="department">Department</label>
+        <select class="form-control" id="department" formControlName="department">
             <option *ngFor="let dept of departments" value="{{dept}}">{{dept}}</option>
         </select>
     </div>

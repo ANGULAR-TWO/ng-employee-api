@@ -1,7 +1,7 @@
 <h1>Employee List</h1>
 <button class="btn btn-primary" [routerLink]="['']">Employee Form</button>
 <div class="row">&nbsp;</div>
-<div *ngIf="employees.length < 0" class="alert alert-danger">No Employee Record Found</div>
+<div *ngIf="employees.length == 0" class="alert alert-danger">No Employee Record Found</div>
 
 <table class="table" *ngIf="employees.length > 0">
     <thead>
