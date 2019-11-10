@@ -3,14 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { EmployeeFormComponent } from './employee-form/employee-form.component';
+import { RouterModule } from '@angular/router';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmployeeFormComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([{path:'', component:EmployeeFormComponent},{path:'employees',component:EmployeeListComponent}])
   ],
   providers: [],
   bootstrap: [AppComponent]

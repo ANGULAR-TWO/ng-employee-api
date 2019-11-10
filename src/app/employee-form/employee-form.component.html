@@ -1,0 +1,32 @@
+<h1>Add Employee Form</h1>
+<button class="btn btn-primary" [routerLink]="['employees']">View Employee List</button>
+<form action="">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="dateOfBirth">Date Of Birth</label>
+        <input id="dateOfBirth" type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="gender">
+            <option *ngFor="let gender of genders" value="{{gender}}">{{gender}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="gender">Department</label>
+        <select class="form-control" id="departmet">
+            <option *ngFor="let dept of departments" value="{{dept}}">{{dept}}</option>
+        </select>
+    </div>
+
+    <button class="btn btn-primary">Submit</button>
+</form>
