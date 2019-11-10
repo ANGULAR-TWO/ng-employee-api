@@ -1,2 +1,27 @@
 <h1>Employee List</h1>
 <button class="btn btn-primary" [routerLink]="['']">Employee Form</button>
+<div class="row">&nbsp;</div>
+<div *ngIf="employees.length < 0" class="alert alert-danger">No Employee Record Found</div>
+
+<table class="table" *ngIf="employees.length > 0">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Date Of Birth</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Department</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of employees;index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{e.firstName}} </td>
+            <td>{{e.lastName}} </td>
+            <td>{{e.dateOfBirth}} </td>
+            <td>{{e.gender}} </td>
+            <td>{{e.department}} </td>
+        </tr>
+    </tbody>
+</table>
