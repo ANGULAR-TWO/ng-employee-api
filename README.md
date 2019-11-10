@@ -1,5 +1,8 @@
 # NgEmployeeApi
 
+## Screenshots:
+https://github.com/ANGULAR-TWO/ng-employee-api/issues/1
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
 ## Development server
